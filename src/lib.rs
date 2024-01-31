@@ -60,6 +60,7 @@
     any(arm_llsc, target_arch = "x86"),
     doc = "- [`Object`](pool::object::Object) -- objects managed by an object pool"
 )]
+//! - [`linked_list::LinkedList`]
 //! - [`sorted_linked_list::SortedLinkedList`]
 //! - [`String`]
 //! - [`Vec`]
@@ -120,6 +121,7 @@ mod defmt;
 pub mod mpmc;
 #[cfg(any(arm_llsc, target_arch = "x86"))]
 pub mod pool;
+pub mod linked_list;
 pub mod sorted_linked_list;
 #[cfg(any(
     // assume we have all atomics available if we're using portable-atomic
